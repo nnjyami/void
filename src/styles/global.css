@@ -51,9 +51,9 @@ body {
 }
 main {
 	width: 720px;
-	max-width: calc(100% - 3.75em);
+	max-width: calc(100% - 3.25em);
 	margin: auto;
-	padding: 3em 3.25em 3em 0.5em;
+	padding: 3em 2.75em 3em 0.5em;
 }
 h1,
 h2,
