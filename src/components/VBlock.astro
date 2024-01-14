@@ -14,7 +14,6 @@ const columnClassName = `column-${column}`;
     width: 100%;
     writing-mode: vertical-rl;
 
-    font-size: 16px;
     font-family: fot-tsukuaoldmin-pr6n, sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -31,7 +30,9 @@ const columnClassName = `column-${column}`;
     height: auto;
   }
   p {
+    font-size: 16px;
     padding: 0;
+    margin: 0 0 1em;
   }
   .column-1 {
     column-count: 1;
@@ -46,5 +47,10 @@ const columnClassName = `column-${column}`;
     column-width: 14em;
     column-gap: 0.1em;
     height: auto;
+  }
+  @media (max-width: 720px) {
+    p {
+      font-size: 14px;
+    }
   }
 </style>
