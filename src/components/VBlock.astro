@@ -18,10 +18,20 @@ const columnClassName = `column-${column}`;
     font-family: fot-tsukuaoldmin-pr6n, sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-feature-settings: initial;
+    font-feature-settings: "vpal";
     text-align: justify;
-    letter-spacing: 0.05em;
+    text-justify: inter-ideograph;
+    letter-spacing: 0.1em;
     vertical-align: top;
+
+    column-fill: balance;
+    column-count: auto;
+    column-width: 14em;
+    column-gap: 0.1em;
+    height: auto;
+  }
+  p {
+    padding: 0;
   }
   .column-1 {
     column-count: 1;
@@ -31,8 +41,10 @@ const columnClassName = `column-${column}`;
     column-count: 2;
     height: 38em;
   }
-  .column-3 {
-    column-count: 3;
+  .column-auto {
+    column-count: auto;
+    column-width: 14em;
+    column-gap: 0.1em;
     height: auto;
   }
 </style>
