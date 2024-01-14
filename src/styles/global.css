@@ -81,10 +81,12 @@ h5 {
 }
 .column h1 {
 	font-size: 1.563em;
+	font-weight: normal;
 	margin-left: 0.5em;
 }
 .column h2 {
 	font-size: 1.25em;
+	font-weight: normal;
 	margin-left: 0.5em;
 }
 
