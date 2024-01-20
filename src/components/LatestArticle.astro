@@ -1,0 +1,33 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
+
+const allBlogPosts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+const latestEntry = allBlogPosts.shift();
+const { Content } = await latestEntry.render();
+const pubDate = latestEntry.data.pubDate;
+---
+
+<div class="title">
+  <div class="date ja_f">
+    <FormattedDate date={pubDate} />
+  </div>
+</div>
+<Content />
+
+<style>
+  .title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .date {
+    padding: 0 0 2em;
+    color: rgb(var(--black));
+    font-size: 11px;
+    letter-spacing: 0.5em;
+    transform: scale(1.2, 0.8);
+  }
+</style>

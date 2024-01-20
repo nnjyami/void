@@ -7,7 +7,7 @@ heroImage: '/blog-placeholder-5.jpg'
 
 import Page from '../layouts/Page.astro';
 import VBlock from '../components/VBlock.astro';
-
+import LatestArticle from '../components/LatestArticle.astro';
 
 <Page
 	title="179.jp"
@@ -15,6 +15,7 @@ import VBlock from '../components/VBlock.astro';
 	pubDate={new Date('August 08 2021')}
 	heroImage="/blog-placeholder-about.jpg"
 >
+<LatestArticle />
 <VBlock column="1">
 プログラム用語で本番環境などから分離された、安全に試行錯誤できる検証環境のことを sandbox と言う。日本語にするなら砂場になるのだろうか。サンドボックスっていうとなんだかスゴそうだけど、日本語にすると砂場。  
 頭に浮かんだものを作っては壊し、作っては壊しを繰り返す。  
