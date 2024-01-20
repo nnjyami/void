@@ -2,10 +2,12 @@
 import { getCollection, getEntry } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 
-const allBlogPosts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
-const latestEntry = allBlogPosts.shift();
+const latestEntry = await (await getCollection("blog"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .shift();
+if (latestEntry === undefined) {
+  throw new Error("No entries found");
+}
 const { Content } = await latestEntry.render();
 const pubDate = latestEntry.data.pubDate;
 ---
