@@ -31,16 +31,17 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
         color: rgb(var(--gray-dark));
       }
       .title {
-        margin-bottom: 1em;
-        padding: 1em 0;
         text-align: center;
         line-height: 1;
+        padding: 0 0 0.5em;
+        margin-bottom: 1.25em;
+        border-bottom: 1px solid rgba(var(--black), 0.1);
       }
       .title h1 {
         margin: 0 0 0.5em 0;
       }
       .date {
-        padding-bottom: 0.5em;
+        padding-bottom: 0;
         color: rgb(var(--black));
         font-size: 11px;
         letter-spacing: 0.5em;
