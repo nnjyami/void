@@ -52,10 +52,10 @@ body {
 main {
 	box-sizing: border-box;
 	width: 100%;
-	max-width: calc(100% - 0.6em);
+	max-width: calc(100% - 0.4em);
 	margin: auto;
 	overflow-x: hidden;
-	padding: 0.5em 0.3em 3em 0.3em;
+	padding: 0.5em 0.2em 3em;
 	position: relative;
 }
 h1,
